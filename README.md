@@ -39,6 +39,7 @@ For a one-off task, attach `SKILL.md` and ask the Bot to follow it without savin
 Clone the repository into Grok's personal skills directory:
 
 ```bash
+mkdir -p ~/.grok/skills
 git clone https://github.com/unicodef1wn/lauren-poteto-rules.git \
   ~/.grok/skills/lauren-poteto-rules
 ```
@@ -50,6 +51,7 @@ Start a new session and invoke `/lauren-poteto-rules`. To share it only inside o
 Clone it into the user skills directory:
 
 ```bash
+mkdir -p ~/.agents/skills
 git clone https://github.com/unicodef1wn/lauren-poteto-rules.git \
   ~/.agents/skills/lauren-poteto-rules
 ```
@@ -61,6 +63,7 @@ Start a new Codex session and invoke `$lauren-poteto-rules`. For one repository,
 Clone it into Claude Code's personal skills directory:
 
 ```bash
+mkdir -p ~/.claude/skills
 git clone https://github.com/unicodef1wn/lauren-poteto-rules.git \
   ~/.claude/skills/lauren-poteto-rules
 ```

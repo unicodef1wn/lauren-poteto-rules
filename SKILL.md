@@ -1,6 +1,6 @@
 ---
 name: lauren-poteto-rules
-description: Evidence-driven engineering workflow for coding agents. Use for investigation, implementation, review, skill evaluation, or delegation when runtime verification and durable project constraints matter.
+description: Use when an engineering task requires diagnosis, runtime verification, correction of recurring agent failures, or coordination of delegated coding work.
 ---
 
 # Lauren Poteto Rules
