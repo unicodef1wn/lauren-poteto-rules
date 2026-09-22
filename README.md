@@ -70,7 +70,43 @@ git clone https://github.com/unicodef1wn/lauren-poteto-rules.git \
 
 Invoke it with `/lauren-poteto-rules`. For a project installation, use `.claude/skills/lauren-poteto-rules`.
 
-### Cursor
+### Cursor CLI
+
+Install [Cursor CLI](https://cursor.com/docs/cli/overview) and run `cursor-agent login`
+if you are not already authenticated. Clone the skill into Cursor's personal skills
+directory:
+
+```bash
+mkdir -p ~/.cursor/skills
+git clone https://github.com/unicodef1wn/lauren-poteto-rules.git \
+  ~/.cursor/skills/lauren-poteto-rules
+```
+
+Start a fresh CLI session from the project you want to work on:
+
+```bash
+cursor-agent
+```
+
+Ask it to use the installed skill explicitly:
+
+```text
+Use the lauren-poteto-rules skill for this task.
+```
+
+To check discovery without changing project files, run this from a project you trust
+(`--trust` accepts workspace trust for this invocation):
+
+```bash
+cursor-agent --print --mode ask --trust \
+  'Use the lauren-poteto-rules skill. Read its SKILL.md and report the file path and the rule about matching verification to the task. Do not edit files or run application tests.'
+```
+
+Check that the reported path is `~/.cursor/skills/lauren-poteto-rules/SKILL.md`
+(expanded to your home directory) and the response cites the installed instructions.
+This checks skill loading, not whether the agent will follow every rule in future tasks.
+
+### Cursor editor
 
 Create a project rule with **New Cursor Rule** or **Cursor Settings → Rules**. Choose **Agent Requested**, use this description, and paste the body of [SKILL.md](SKILL.md):
 
